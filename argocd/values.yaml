@@ -15,5 +15,5 @@ argo-cd:
       radek-repo:
         url: https://github.com/argoproj/private-repo
     secret:
-      # password is abcd https://www.browserling.com/tools/bcrypt
+      # password is 1234 https://www.browserling.com/tools/bcrypt
       argocdServerAdminPassword: $2a$10$QB4jEvxtQtb9FzToQgVCJeBjLR7k8LpKw4zjTw0.zqTIafmC4eSP6
