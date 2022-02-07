@@ -1,0 +1,19 @@
+argo-cd:
+  namespace: argocd
+  global:
+    image:
+      imagePullPolicy: IfNotPresent
+  dex:
+    enabled: false
+  server:
+    extraArgs:
+      - --insecure
+    config:
+      url: http://localhost:8080
+  configs:
+    repositories:
+      radek-repo:
+        url: https://github.com/argoproj/private-repo
+    secret:
+      # password is abcd https://www.browserling.com/tools/bcrypt
+      argocdServerAdminPassword: $2a$10$QB4jEvxtQtb9FzToQgVCJeBjLR7k8LpKw4zjTw0.zqTIafmC4eSP6
